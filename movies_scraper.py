@@ -32,10 +32,10 @@ def get_movie(query):
         links = movie_page_link.find_all("a", {'rel': 'noopener', 'data-wpel-link': 'internal'})
         final_links = {}
         for i in links:
-            url = f"https://afly.com/api?api={api_key}&url={i['href']}"
+            url = f"https://Afly.com/api?api={api_key}&url={i['href']}"
             response = requests.get(url)
             link = response.json()
-            final_links[f"{i.text}"] = link['afly']
+            final_links[f"{i.text}"] = link['Afly']
         movie_details["links"] = final_links
     return movie_details
 
